@@ -1,47 +1,12 @@
-# Laravel 8 PC Hadrware inventory managment
+## Como usar
 
+- Clona el repositorio
+- Copia __.env.example__ y cambialo a __.env__ cambia las credenciales dentro de .env
+- Inicia en caso de no tenerlo __composer install__
+- Ejecuta __php artisan key:generate__
+- Ejecuta  __php artisan migrate --seed__ (datos agregados de los seeders para crear la base de datos)
+- Para iniciarlo utiliza __php artisan serve__. 
+- Puedes iniciar sesión de administrador con laas siguientes credenciales __admin@gmail.com__ - __tupu__
+- Para otros usuarios registralos mediante el panel de administrador
 
-
-- - - - -
-
-## Screenshots 
-
-![Laravel Stock Management 01](https://quickadminpanel.com/blog/wp-content/uploads/2020/04/Screen-Shot-2020-04-07-at-12.24.57-PM.png)
-
-- - - - -
-
-![Laravel Stock Management 02](https://quickadminpanel.com/blog/wp-content/uploads/2020/04/Screen-Shot-2020-04-07-at-12.24.04-PM.png)
-
-- - - - -
-
-![Laravel Stock Management 03](https://quickadminpanel.com/blog/wp-content/uploads/2020/04/Screen-Shot-2020-04-07-at-12.24.18-PM.png)
-
-- - - - -
-
-![Laravel Stock Management 04](https://quickadminpanel.com/blog/wp-content/uploads/2020/04/Screen-Shot-2020-04-07-at-12.25.12-PM.png)
-
-- - - - -
-
-## How to use
-
-- Clone the repository with __git clone__
-- Copy __.env.example__ file to __.env__ and edit database credentials there
-- Run __composer install__
-- Run __php artisan key:generate__
-- Run __php artisan migrate --seed__ (it has some seeded data for your testing)
-- That's it: launch the main URL. 
-- You can login to adminpanel by going go `/login` URL and login with credentials __admin@admin.com__ - __password__
-- For other users, doctors/directors, their email is in `users.email` field, and password is __password__
-
-
-## License
-
-Basically, feel free to use and re-use any way you want.
-
----
-
-## More from our LaravelDaily Team
-
-- Check out our adminpanel generator [QuickAdminPanel](https://quickadminpanel.com)
-- Subscribe to our [YouTube channel Laravel Business](https://www.youtube.com/channel/UCTuplgOBi6tJIlesIboymGA)
-- Enroll in our [Laravel Online Courses](https://laraveldaily.teachable.com/)
+##ZeriPC
