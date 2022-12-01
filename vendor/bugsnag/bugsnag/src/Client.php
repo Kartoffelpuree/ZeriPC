@@ -22,7 +22,7 @@ use Bugsnag\Shutdown\ShutdownStrategyInterface;
 use Composer\CaBundle\CaBundle;
 use GuzzleHttp;
 
-class Client
+class Client implements FeatureDataStore
 {
     /**
      * The default event notification endpoint.
@@ -807,6 +807,54 @@ class Client
     }
 
     /**
+     * Add a single feature flag to all future reports.
+     *
+     * @param string $name
+     * @param string|null $variant
+     *
+     * @return void
+     */
+    public function addFeatureFlag($name, $variant = null)
+    {
+        $this->config->addFeatureFlag($name, $variant);
+    }
+
+    /**
+     * Add multiple feature flags to all future reports.
+     *
+     * @param FeatureFlag[] $featureFlags
+     * @phpstan-param list<FeatureFlag> $featureFlags
+     *
+     * @return void
+     */
+    public function addFeatureFlags(array $featureFlags)
+    {
+        $this->config->addFeatureFlags($featureFlags);
+    }
+
+    /**
+     * Remove the feature flag with the given name from all future reports.
+     *
+     * @param string $name
+     *
+     * @return void
+     */
+    public function clearFeatureFlag($name)
+    {
+        $this->config->clearFeatureFlag($name);
+    }
+
+    /**
+     * Remove all feature flags from all future reports.
+     *
+     * @return void
+     */
+    public function clearFeatureFlags()
+    {
+        $this->config->clearFeatureFlags();
+    }
+
+    /**
      * Set Bugsnag's error reporting level.
      *
      * If this is not set, we'll use your current PHP error_reporting value
@@ -1017,5 +1065,25 @@ class Client
     public function getRedactedKeys()
     {
         return $this->config->getRedactedKeys();
+    }
+
+    /**
+     * @param int $maxBreadcrumbs
+     *
+     * @return $this
+     */
+    public function setMaxBreadcrumbs($maxBreadcrumbs)
+    {
+        $this->recorder->setMaxBreadcrumbs($maxBreadcrumbs);
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxBreadcrumbs()
+    {
+        return $this->recorder->getMaxBreadcrumbs();
     }
 }

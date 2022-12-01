@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Stock Management',
+    'site_title' => 'Zeri PC',
 ];

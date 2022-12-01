@@ -179,7 +179,7 @@ return [
     |
     */
     //accesso a cookie mediante javascript
-    'http_only' => false,
+    'http_only' => true,
 
     /*
     |--------------------------------------------------------------------------

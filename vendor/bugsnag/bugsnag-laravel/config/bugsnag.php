@@ -330,4 +330,35 @@ return [
     */
 
     'redacted_keys' => empty(env('BUGSNAG_REDACTED_KEYS')) ? null : explode(',', env('BUGSNAG_REDACTED_KEYS')),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Feature flags
+    |--------------------------------------------------------------------------
+    |
+    | An array of feature flags to add to all reports.
+    |
+    | Each element in the array must have a "name" key and can optionally have a
+    | "variant" key, for example:
+    |
+    | [
+    |     ['name' => 'example without a variant'],
+    |     ['name' => 'example with a variant', 'variant' => 'example of a variant'],
+    | ]
+    |
+    */
+
+    'feature_flags' => [],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Max breadcrumbs
+    |--------------------------------------------------------------------------
+    |
+    | The maximum number of breadcrumbs to send with a report.
+    |
+    | This should be an integer between 0-100 (inclusive).
+    */
+
+    'max_breadcrumbs' => null,
 ];

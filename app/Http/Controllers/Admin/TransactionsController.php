@@ -44,7 +44,7 @@ class TransactionsController extends Controller
     {
         abort_if(Gate::denies('transaction_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $assets = Asset::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $assets =Asset ::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $users = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 

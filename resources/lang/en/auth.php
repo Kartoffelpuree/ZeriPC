@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'failed'   => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed'   => 'Las credenciales de acceso son incorrectas.',
+    'throttle' => 'Varios intentos de logeo. Por favor intenta denuevo en :seconds seconds.',
 ];
