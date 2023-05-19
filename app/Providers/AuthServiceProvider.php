@@ -28,6 +28,7 @@ class AuthServiceProvider extends ServiceProvider
 
         if (!app()->runningInConsole()) {
             Passport::routes();
+            #Passport::personalAccessTokensExpireIn(now()->addHours(1));
         };
     }
 

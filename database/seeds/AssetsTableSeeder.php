@@ -25,6 +25,15 @@ class AssetsTableSeeder extends Seeder
             'Ryzen 7 7900X',
             'Intel i5 10950'
         ];
+        $assetsdesc= [
+            'Tarjeta de video',
+            'Teclado',
+            'Mouse Gamer',
+            'GPU AMD',
+            'Tarjeta madre',
+            'Procesador AMD',
+            'Procesador Intol'
+        ];
 
         foreach ($assets as $asset) {
             Asset::factory()->create([

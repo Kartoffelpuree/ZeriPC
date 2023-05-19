@@ -24,7 +24,7 @@ class StockFactory extends Factory
     public function definition()
     {
         return [
-            'current_stock' => 0,
+            'current_stock' => $randomNumber = rand(1, 500),
             'asset_id' => Asset::inRandomOrder()->first()->id,
             'team_id' => Team::inRandomOrder()->first()->id,
         ];

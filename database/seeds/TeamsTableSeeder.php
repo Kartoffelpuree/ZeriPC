@@ -25,7 +25,8 @@ class TeamsTableSeeder extends Seeder
             ]);
         }
         for ($i = 0; $i < 5; $i++) {
-            $randomNumber = rand(123, 789);
+            $randomNumber = 1;
+            #rand(123, 789);
 
             $team = Team::factory()->create([
                 'name' => "Tienda $randomNumber",
